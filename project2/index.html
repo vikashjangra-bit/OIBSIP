@@ -1,1 +1,107 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthPro - Premium Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="auth-container" id="authContainer">
+            <div class="auth-card">
+                <div class="brand">
+                    <span class="brand-icon">⚡</span>
+                    <h1>AuthPro</h1>
+                    <p class="brand-sub">Secure. Fast. Reliable.</p>
+                </div>
+
+                <div class="tab-switch">
+                    <button class="tab-btn active" data-tab="login">Sign In</button>
+                    <button class="tab-btn" data-tab="register">Create Account</button>
+                </div>
+
+                <form id="loginForm" class="form active">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" placeholder=" " required>
+                        <label>Email Address</label>
+                        <span class="input-icon">📧</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder=" " required>
+                        <label>Password</label>
+                        <span class="input-icon">🔑</span>
+                        <button type="button" class="toggle-pass">👁</button>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign In →</button>
+                    <div id="loginMsg" class="message"></div>
+                </form>
+
+                <form id="registerForm" class="form">
+                    <div class="input-group">
+                        <input type="text" id="regName" placeholder=" " required>
+                        <label>Full Name</label>
+                        <span class="input-icon">👤</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="regEmail" placeholder=" " required>
+                        <label>Email Address</label>
+                        <span class="input-icon">📧</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="regPassword" placeholder=" " required>
+                        <label>Password</label>
+                        <span class="input-icon">🔑</span>
+                        <button type="button" class="toggle-pass">👁</button>
+                    </div>
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="regConfirm" placeholder=" " required>
+                        <label>Confirm Password</label>
+                        <span class="input-icon">✓</span>
+                    </div>
+                    <button type="submit" class="btn-primary">Create Account →</button>
+                    <div id="regMsg" class="message"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="dashboard" id="dashboard">
+            <nav class="nav">
+                <div class="nav-brand">⚡ AuthPro</div>
+                <div class="nav-user">
+                    <span class="avatar" id="userAvatar">👤</span>
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn-logout">Logout</button>
+                </div>
+            </nav>
+            <div class="dashboard-content">
+                <div class="welcome">
+                    <h2>Welcome back, <span id="dashName">User</span>!</h2>
+                    <p>You're securely logged in.</p>
+                </div>
+                <div class="grid">
+                    <div class="card"><span class="card-icon">📊</span><h3>Analytics</h3><p>View your stats</p></div>
+                    <div class="card"><span class="card-icon">⚙️</span><h3>Settings</h3><p>Manage account</p></div>
+                    <div class="card"><span class="card-icon">📝</span><h3>Activity</h3><p>Recent sessions</p></div>
+                    <div class="card"><span class="card-icon">💬</span><h3>Support</h3><p>Get help</p></div>
+                </div>
+                <div class="session">
+                    <span>Logged in as <strong id="sessionEmail">user@email.com</strong></span>
+                    <span class="badge">● Active</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
